@@ -500,10 +500,12 @@ require('lazy').setup({
       local servers = {
         powershell_es = {},
         pylsp = {},
-        ruby_lsp = {},
+        ruby_lsp = {
+          cmd = { '/Users/hayden/.asdf/shims/ruby-lsp' },
+        },
         gopls = {},
         csharp_ls = {},
-        tsserver = {},
+        -- tsserver = {},
         html = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs

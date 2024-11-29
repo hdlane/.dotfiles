@@ -73,6 +73,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
@@ -125,6 +126,9 @@ eval "$(pyenv virtualenv-init -)"
 export DOTNET_ROOT=/opt/homebrew/Cellar/dotnet/8.0.4/libexec
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+# Prevent closing of shell
+setopt IGNORE_EOF
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# . "$HOME/.asdf/asdf.sh"
+# . "$HOME/.asdf/completions/asdf.bash"
